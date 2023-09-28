@@ -1,11 +1,13 @@
 import React from "react"
-import {View, Text } from "react-native"
+import {View, Text, Image } from "react-native"
 import styles from "./style"
 
 export default function Title() {
     return(
         <View style={styles.boxTitle}>
-            <Text style={styles.textTitle}>ONEBITHEALTH</Text>
+            <Image style={styles.logo}
+            source={require('../../../assets/LogoCortada.png')}
+            />
         </View>
     );
 }

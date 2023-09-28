@@ -4,14 +4,13 @@ const styles = StyleSheet.create({
     boxTitle: {
         alignItems:"center",
         justifyContent:"center",
-        padding:10,
-        marginBottom:30,
+        padding:0,
+        margin:0,
     },
-    textTitle:{
-        color:"#FF0043",
-        fontSize:24,
-        fontWeight:"bold",
-    },
+    logo:{
+        height:150,
+        width:150,
+    }
 });
 
 export default styles
