@@ -48,26 +48,30 @@ function validationImc(){
 }
 
     return(
-        <View style={styles.formContext}>
-        <View style={styles.form}>
-            <Text style={styles.formLabel}>Altura</Text>
-            <TextInput style={styles.input} onChangeText={setHeight} value={height} placeholder="Ex. 1.75 m" keyboardType="numeric"/>
-            <Text style={styles.formLabel}>Peso</Text>
-            <TextInput style={styles.input} onChangeText={setWeight} value={weight} placeholder="Ex. 67.23 kg" keyboardType="numeric"/>
-            <TouchableOpacity
-            style={styles.ButtonCalcular}
-                onPress={() => {
-                validationImc()
-                }}>
-                <Text style={styles.textButtonCalcular}>{textButton}</Text>
-            </TouchableOpacity>
-        </View>
+        <View style={styles.container}>
+                
+            <View style={styles.formContext}>
 
-        <View>
-            <ResultIMC messageResultIMC={messageIMC} ResultIMC={imc} informationIMC={infoIMC} />
-        </View>
+                <View style={styles.form}>
+                    <Text style={styles.formLabel}>Altura</Text>
+                    <TextInput style={styles.input} onChangeText={setHeight} value={height} placeholder="Ex. 1.75 m" keyboardType="numbers-and-punctuation"/>
+                    <Text style={styles.formLabel}>Peso</Text>
+                    <TextInput style={styles.input} onChangeText={setWeight} value={weight} placeholder="Ex. 67.23 kg" keyboardType="numbers-and-punctuation"/>
+                    <TouchableOpacity
+                    style={styles.ButtonCalcular}
+                        onPress={() => {
+                        validationImc()
+                        }}>
+                        <Text style={styles.textButtonCalcular}>{textButton}</Text>
+                    </TouchableOpacity>
+                </View>
 
-        <View></View>
+                <View>
+                    <ResultIMC messageResultIMC={messageIMC} ResultIMC={imc} informationIMC={infoIMC} />
+                </View>
+
+            </View>
+
         </View>
     );
 }
